@@ -3,7 +3,7 @@
  * De database verbindingsgegevens
  */
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'php.sql');
+define('DB_NAME', 'magazijn_db.sql');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 
