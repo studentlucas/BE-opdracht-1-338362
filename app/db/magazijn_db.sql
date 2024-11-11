@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 11, 2024 at 08:03 PM
+-- Generation Time: Nov 11, 2024 at 08:18 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.3.12
 
@@ -20,6 +20,54 @@ SET time_zone = "+00:00";
 --
 -- Database: `magazijn_db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `allergeen`
+--
+
+CREATE TABLE `allergeen` (
+  `Id` int NOT NULL,
+  `Naam` varchar(255) DEFAULT NULL,
+  `Omschrijving` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `allergeen`
+--
+
+INSERT INTO `allergeen` (`Id`, `Naam`, `Omschrijving`) VALUES
+(1, 'Gluten', 'Dit product bevat gluten'),
+(2, 'Gelatine', 'Dit product bevat gelatine'),
+(3, 'AZO-Kleurstof', 'Dit product bevat AZO-kleurstoffen'),
+(4, 'Lactose', 'Dit product bevat lactose'),
+(5, 'Soja', 'Dit product bevat soja');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `leverancier`
+--
+
+CREATE TABLE `leverancier` (
+  `Id` int NOT NULL,
+  `Naam` varchar(255) DEFAULT NULL,
+  `ContactPersoon` varchar(255) DEFAULT NULL,
+  `LeverancierNummer` varchar(20) DEFAULT NULL,
+  `Mobiel` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `leverancier`
+--
+
+INSERT INTO `leverancier` (`Id`, `Naam`, `ContactPersoon`, `LeverancierNummer`, `Mobiel`) VALUES
+(1, 'Venco', 'Bert van Linge', 'L1029384719', '06-28493827'),
+(2, 'Astra Sweets', 'Jasper del Monte', 'L1029284315', '06-39398734'),
+(3, 'Haribo', 'Sven Stalman', 'L1029324748', '06-24383291'),
+(4, 'Basset', 'Joyce Stelterberg', 'L1023845773', '06-48293823'),
+(5, 'De Bron', 'Remco Veenstra', 'L1023857736', '06-34291234');
 
 -- --------------------------------------------------------
 
@@ -87,6 +135,18 @@ INSERT INTO `product` (`Id`, `Naam`, `Barcode`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `allergeen`
+--
+ALTER TABLE `allergeen`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `leverancier`
+--
+ALTER TABLE `leverancier`
+  ADD PRIMARY KEY (`Id`);
 
 --
 -- Indexes for table `magazijn`
