@@ -7,7 +7,7 @@
         <div class="col-6">
             <h3><?php echo $data['title']; ?></h3>
 
-            <a href="<?= URLROOT; ?>/Magazijn/productlist">Overzicht Magazijn Jamin</a> 
+            <a href="<?= URLROOT; ?>/Magazijn/index">Overzicht Magazijn Jamin</a> 
 
         </div>
         <div class="col-3"></div>
