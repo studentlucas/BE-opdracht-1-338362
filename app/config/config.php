@@ -11,7 +11,7 @@ define('DB_PASS', '');
 /**
  * De naam van de virtualhost
  */
-define('URLROOT', 'http://localhost/BE-opdracht-1-338362/');
+define('URLROOT', 'http://be-opdracht-1-338362.test/');
 
 
 /**
